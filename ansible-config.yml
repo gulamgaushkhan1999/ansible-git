@@ -4,7 +4,6 @@
       - name: Install Packages
         yum: 
           name: "httpd"
-          state: "present"
       -name: Start Apache Server
        service: 
           name: httpd
@@ -13,5 +12,5 @@
       -name: Deploy Website
        copy:
          src: index.html
-         dest: /var/www/html
+         dest: /var/www/html/
 -
