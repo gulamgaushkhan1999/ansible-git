@@ -1,19 +1,21 @@
----
-- name: AutoDeploy with jenkins
+-
+  name: AutoDeploy with jenkins
   hosts: localhost
   connection: local
-
   tasks: 
-      - name: Install Packages
-        yum: 
-          name: "httpd"
-      -name: Start Apache Server
+     - name: Install Packages
+       yum: 
+         name: httpd
+         state: present
+
+     - name: Start Apache Server
        service: 
-          name: httpd
-          state: started
-          enabled: True
-      -name: Deploy Website
+         name: httpd
+         state: started
+         enabled: True
+
+     - name: Deploy Website
        copy:
          src: index.html
          dest: /var/www/html/
--
+
