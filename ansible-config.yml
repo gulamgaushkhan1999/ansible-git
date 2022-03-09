@@ -1,5 +1,5 @@
----
-- hosts: localhost
+-
+  hosts: localhost
   tasks: 
       - name: Install Packages
         yum: 
@@ -14,4 +14,4 @@
        copy:
          src: index.html
          dest: /var/www/html
-...
+-
