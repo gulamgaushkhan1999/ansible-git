@@ -1,5 +1,8 @@
--
+---
+- name: AutoDeploy with jenkins
   hosts: localhost
+  connection: local
+
   tasks: 
       - name: Install Packages
         yum: 
